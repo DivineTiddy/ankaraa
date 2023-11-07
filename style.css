@@ -3,102 +3,117 @@ body{
     width: 100%;
     background-color: rgb(231, 230, 230);
 }
-
-@keyframes photo {
+@keyframes fashion {
     0%{
-        background-image: url(gown.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
-    20%{
-        background-image: url(ppp.jpeg);
-        background-position: center;
-        background-size: cover;
+        background-image: url(free.jpeg);
+        transition: all ease-in-out;
 
     }
-    40%{
-        background-image: url(fly.jpeg);
-        background-position: center;
-        background-size: cover;
+    100%{
+        background-image: url(logo.jpeg);
+        transition: all ease-in-out;
+    }
+}
 
-    }
-    60%{
-        background-image: url(on.jpeg);
-        background-position: center;
-        background-size: cover;
-    }
-}
-.fashion{
-    background-image: url(free.jpeg);
-    width: 100%;
-    height: 20vh;
-    margin-top: 70px;
+.fashion_background{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.logo{
-    background-image: url(logo.jpeg);
-    width: 100%;
-    height: 20vh;
-    margin-top: 70px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.fly{
-    background-image: url(fly.jpeg);
-    width: 100%;
-    height: 10vh;
-    margin-top: 70px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.animate{
-    height: 10vh;
-    width: 100%;
-    background-image: url(gown.jpeg);   
-    animation: photo 10s infinite ease-in-out;
-    margin-top: 30px;
-}
-.category{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 40px;
-    justify-content: center;
-    background-color: white;
-}
-.list_style{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    
-}
-.list_style li{
-    width: 100%;
     height: 30vh;
-    margin: 10px;
+    width: 100%;
+    margin-top: 10px;
+    animation-name: fashion;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
 }
-.list_style li img{
-    border-radius: 10px;
+#main_container{
+    height: auto;
+    position: relative;
+    top: 10vh;
+    display: flex;
+    flex-direction: row;
 }
+.flex_container{
+    height: 100%;
+    width: 50%;
+}
+.card_holder{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.main_card{
+    height: auto;
+    width: 40%;
+    margin: 30px;
+    border-radius: 5px;
+}
+.main_card img{
+    width: 100%;
+    height: 85%;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
 
+}
+.card_statement{
+    display: flex;
+    flex-direction: column;
+}
+.card_statement i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+.card_statement a button{
+    width: 100%;
+    border: none;
+    background-color: orange;
+    color: white;
+}
 footer{
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: center;
     background-color: rgb(4, 4, 31);
     color: white;
-    margin-top: 30px;
+    margin-top: 100px;
+    flex-direction: column;
+    padding: 30px;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 50px;
+    margin: 5px;
+}
+form input{
+    border: none;
+}
+form button{
+    padding: 5px;
+    border: none;
 }
 .footer_content button{
-    padding: 10px;
+    padding: 5px;
     margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    border: none;
+    margin: 15px;
+}
+.form_conatianer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 a{
     cursor: pointer;
@@ -107,20 +122,45 @@ a{
 .icons{
     font-size: 20px;
     gap: 20px;
+    margin: 13px;
+    margin-right: 00px;
 }
 .icons i{
     color: white;
 }
 
-@media screen and (max-width:950px){
-    .list_style{
-        list-style: none;
-        display: flex;
-        flex-direction: column;        
-    }
-    .list_style li{
-        margin-top: 40px;
-    }
+
+.card img{
+    width: 200px;
+    height: 200px;
 }
+@media screen and (max-width:770px){
+    #main_container{
+        height: auto;
+        position: relative;
+        top: 10vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .flex_container{
+        height: 100%;
+        width: 100%;
+    }
+    .main_card img{
+        width: 100%;
+        height: 83%;
+    
+    }
+    .main_card{
+        height: auto;
+        width: 40%;
+        margin: 20px;
+        border-radius: 5px;
+    }
+    footer{
+    }
 
 
+
+
+}
